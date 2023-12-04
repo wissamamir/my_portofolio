@@ -1,0 +1,155 @@
+.my-project-section{
+    margin-top: 100px;
+    padding: 30px 60px;
+    min-height: 80vh;
+    h2 {
+        text-align: center;
+        display: block;
+        margin: auto;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    .myproject-content {
+        display: flex;
+        justify-content:center;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 15px;
+        .myprojects.others {
+            flex-basis: 65%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            // gap: 15px;
+        }
+
+        .myprojects.with {
+            flex-basis: 32.5%;
+            
+        }
+
+        .myprojects {
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 10px;
+            box-shadow: 1px 2px 5px;
+            position: relative;
+            overflow: hidden;
+            .boxes {
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                .box {
+                    flex-basis: 48%;
+                }
+            }
+            
+            .box {
+                position: relative;
+                overflow: hidden;
+                transition: 0.5s;
+                border: 1px solid;
+                border-radius: 10px;
+                img {
+                    position: relative;
+                    overflow: hidden;
+                    max-width: 100%;
+                    // border-radius: 10px;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    margin-bottom: 10px;
+                    transition: 0.5s;
+                }
+                &:hover img{
+                    transform: scaleX(1.2);
+
+                }
+                .box-content {
+                    text-align: center;
+                    padding: 20px;
+
+                    a.btn {
+                        color: white;
+                        border: 1px solid white;
+                        transition: 0.5s;
+                        margin-top: 10px;
+                        &:hover {
+                            background-color: white;
+                            color: $mainColor;
+                            border-color: $mainColor;
+
+
+                        }
+                    }
+                }
+                
+
+
+            }
+
+
+            h4 {
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 500;
+                border: 1px solid $mainColor;
+                border-radius: 10px;
+       
+                padding: 2px 7px;
+            }
+        }
+    }
+
+    
+    }
+
+    @media screen and (max-width:800px){
+        .my-project-section {
+            padding: 30px !important;
+        }
+
+
+        .myprojects.others {
+            flex-basis: 100% !important;
+        }
+        .box-content {
+            padding: 10px  !important;
+            a.btn {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .myprojects.with {
+            flex-basis: 100% !important;
+            
+        }
+
+        .myprojects {
+            padding: 10px;
+            .boxes {
+                .box {
+                    flex-basis: 100% !important;
+                }
+            }
+            .box-text {
+                font-size: 13px;
+            }
+
+
+            h4 {
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 14px !important;
+                font-weight: 500;
+            }
+        }
+
+    }

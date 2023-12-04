@@ -1,0 +1,86 @@
+.contact-section {
+    padding: 30px !important;
+    margin-top: 100px;
+    padding: 30px 60px;
+    min-height: 80vh;
+    h2 {
+        text-align: center;
+        display: block;
+        margin: auto;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+    .form-container {
+        padding: 10px;
+        border: 1px solid;
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 50%;
+        margin: auto;
+        .field {
+            width: 100%;
+            text-align: center;
+            
+            input[type="submit"] {
+                background-color: white;
+                color: $mainColor;
+                transition: 0.5s;
+
+                &:hover {
+                    background-color: $mainColor;
+                    color: white;
+                }
+
+            }
+            input , textarea  {
+                width: 100%;
+                padding: 15px;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                background-color: $mainColor;
+                transition: 0.5s;
+                color: white;
+                &:focus {
+                    // transition: 0.5s;
+                    border: 1px solid white;
+                }
+                   &:focus::placeholder  {
+                    transition: 0.5s;
+                    color: white;
+                }
+
+                
+                &:hover {
+                    background-color: $mainColor;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:550px){
+    .contact-section {
+        padding: 30px !important; 
+        .form-container  {
+            width: 90% !important;
+    
+            input , textarea  {
+                padding: 10px !important;
+                &::placeholder {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+
+ }

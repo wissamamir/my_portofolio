@@ -1,0 +1,113 @@
+body {
+    background: rgb(18 22 47);
+    color: white;
+}
+
+.hero {
+    width: 100%;
+    margin-top: 100px;
+    min-height: 80vh;
+    position: relative;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .hero-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width:65%;
+            align-items: center;
+            
+                    .btn {
+                        margin-top: 10px;
+                        width: 50%;
+                        border:  1px solid $mainColor;
+                        color: #fff;
+                        background-color: $secondColor;
+                    }
+                    .btn:hover {
+                        color: rgb(25, 32, 71);
+                        background-color: #fff;
+                    }
+        }
+       
+    }
+
+
+}
+
+.media-section {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .icon {
+        border: 1px solid $mainColor; 
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background-color: #fff;
+        transition: 0.4s;
+        cursor: pointer;
+        
+        i {
+            color: $secondColor;
+            transition: 0.4s;
+        }
+        
+    } 
+    .icon:hover i {
+        color: #fff;
+    }
+    .icon:hover {
+        background-color: $secondColor;
+    }
+}
+
+
+
+@media screen and (max-width:550px){
+    .hero {
+        margin-top: 40px;
+        .hero-content {
+            flex-direction: column;
+            .hero-img {
+                order: -1;
+                img {
+                    height: 300px !important;
+                    object-fit: contain;
+                }
+            }
+            .hero-text {
+                gap: 0 !important;
+                p.section-title {
+                    font-size: 12px;
+                }
+                h1.hero-job-title {
+                    font-size: 20px;
+                }
+    
+                .btn {
+    
+                    width: 100% !important;
+    
+                }
+            }
+        }
+    }
+
+    
+}
